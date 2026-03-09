@@ -19,6 +19,7 @@ on:
         required: true
         default: 'rax3000m'
         type: choice
+        options:
           - rax3000m
           - 360t7
           - ct3003
@@ -35,7 +36,7 @@ on:
 env:
   # Base settings overridable per-device later
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
-  REPO_BRANCH: master
+  REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/${{ github.event.inputs.device }}.config
   DIY_P1_SH: scripts/diy-part1.sh
