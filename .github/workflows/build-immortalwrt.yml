@@ -42,6 +42,7 @@ env:
   CONFIG_FILE: configs/${{ github.event.inputs.device }}.config
   DIY_P1_SH: scripts/diy-part1.sh
   DIY_P2_SH: scripts/diy-part2.sh
+  RELEASE_FILE: release.txt
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
