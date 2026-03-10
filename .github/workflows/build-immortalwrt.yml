@@ -24,6 +24,7 @@ on:
           - 360t7
           - ct3003
           - redmi-ax6
+          - rax3000m-6-6
       ssh:
         description: 'SSH connection to Actions'
         required: false
