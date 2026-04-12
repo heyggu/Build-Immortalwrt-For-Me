@@ -60,7 +60,7 @@ UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
 UPDATE_PACKAGE "natmapt" "heyggu/openwrt-natmapt" "master"
 UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master" "pkg"
 UPDATE_PACKAGE "luci-app-natmapt" "heyggu/luci-app-natmapt" "master"
-UPDATE_PACKAGE "tailscale" "GuNanOvO/openwrt-tailscale" "main"
+UPDATE_PACKAGE "tailscale" "GuNanOvO/openwrt-tailscale" "main" "pkg" "openwrt-tailscale"
 UPDATE_PACKAGE "luci-app-tailscale-community" "Tokisaki-Galaxy/luci-app-tailscale-community" "master"
 
 # UPDATE_PACKAGE "alist" "sbwml/luci-app-alist" "main"
