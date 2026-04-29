@@ -75,6 +75,32 @@ if [[ $WRT_REPO != *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
 fi
 
+# 修复 tailscale 编译依赖与 Makefile
+if [ -d "./tailscale" ]; then
+	echo "正在检查并配置 UPX 压缩工具依赖..."
+	upx_dir="../upx"
+	upx_path="$upx_dir/upx"
+	if [ ! -x "$upx_path" ]; then
+		mkdir -p "$upx_dir"
+		if ! command -v upx &> /dev/null; then
+			echo "系统未安装 upx, 正在尝试通过 apt-get 自动安装..."
+			sudo apt-get update -y || true
+			sudo apt-get install -y upx-ucl
+		fi
+		sys_upx=$(command -v upx)
+		if [ -n "$sys_upx" ]; then
+			ln -sf "$sys_upx" "$upx_path"
+			echo "✔ 成功创建 UPX 软链接: $sys_upx -> $upx_path"
+		else
+			echo "❌ 警告: UPX 安装失败或未找到，稍后的编译可能仍然会报错！" >&2
+		fi
+	else
+		echo "✔ UPX 工具已就绪 ($upx_path)"
+	fi
+	# 修改 Makefile（删除包含 /builder 的行）
+	sed -i '/\/builder/d' "./tailscale/Makefile" || true
+fi
+
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
