@@ -52,7 +52,7 @@ UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
 #UPDATE_PACKAGE "argon-config" "jerrykuku/luci-app-argon-config" "master"
 
 
-UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "main"
+#UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "main"
 UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
 #UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
 #UPDATE_PACKAGE "passwall" "xiaorouji/openwrt-passwall" "main" "pkg"
@@ -68,7 +68,7 @@ UPDATE_PACKAGE "luci-app-tailscale-community" "Tokisaki-Galaxy/luci-app-tailscal
 UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
 # UPDATE_PACKAGE "qmodem" "FUjr/modem_feeds" "main" #调制解调器支持包
-UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
+UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-wolultra luci-app-homeproxy sing-box"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 if [[ $WRT_REPO != *"immortalwrt"* ]]; then
