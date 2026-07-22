@@ -64,11 +64,11 @@ UPDATE_PACKAGE "tailscale" "GuNanOvO/openwrt-tailscale" "main" "pkg"
 UPDATE_PACKAGE "luci-app-tailscale-community" "Tokisaki-Galaxy/luci-app-tailscale-community" "master" ""
 
 # UPDATE_PACKAGE "alist" "sbwml/luci-app-alist" "main"
-#UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
+UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
 UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
 # UPDATE_PACKAGE "qmodem" "FUjr/modem_feeds" "main" #调制解调器支持包
-UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-wolultra luci-app-homeproxy sing-box"
+UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "sing-box luci-app-homeproxy luci-app-timewol luci-app-wolplus luci-app-wolultra"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 if [[ $WRT_REPO != *"immortalwrt"* ]]; then
@@ -143,5 +143,5 @@ UPDATE_VERSION() {
 }
 
 #UPDATE_VERSION "软件包名" "测试版，true，可选，默认为否"
-UPDATE_VERSION "sing-box"
-UPDATE_VERSION "tailscale"
+#UPDATE_VERSION "sing-box"
+#UPDATE_VERSION "tailscale"
